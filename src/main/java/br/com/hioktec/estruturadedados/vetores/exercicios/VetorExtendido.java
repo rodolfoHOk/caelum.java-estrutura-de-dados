@@ -1,33 +1,22 @@
-package br.com.hioktec.estruturadedados.vetores;
+package br.com.hioktec.estruturadedados.vetores.exercicios;
 
-import br.com.hioktec.estruturadedados.lista.Lista;
+import br.com.hioktec.estruturadedados.lista.ListaExtendida;
 
-public class Vetor<E> implements Lista<E>{
-
+public class VetorExtendido<E> implements ListaExtendida<E>{
+	
 	@SuppressWarnings("unchecked")
 	private E[] elementos = (E[]) new Object[100000];
 	
 	private int totalDeElementos = 0;
 	
-	// método 1 teste linear vs constante
-//	public void adiciona(E elemento) { 
-//		for (int i = 0; i < this.elementos.length; i++) {
-//			if (this.elementos[i] == null) {
-//				this.elementos[i] = elemento;
-//				break;
-//			}
-//		}
-//	}
-	
-	// método 2 teste linear vs constante
 	public void adiciona(E elemento) { 
-		garantaEspaco(); // passar no teste estoura
+		garantaEspaco();
 		this.elementos[totalDeElementos] = elemento;
 		this.totalDeElementos++;
 	}
 	
 	public void adiciona(int posicao, E elemento) {
-		garantaEspaco(); // passar no teste estoura
+		garantaEspaco();
 		if (!posicaoValida(posicao)) {
 			throw new IllegalArgumentException("Posição Inválida");
 		}
@@ -60,18 +49,6 @@ public class Vetor<E> implements Lista<E>{
 		this.totalDeElementos--;
 	}
 
-	// método 1 teste de tempo do contem
-//	public boolean contem(E elemento) {
-//		for (int i = 0; i < this.elementos.length; i++) {
-//			if (elemento.equals(elementos[i])) {
-//				return true;
-//			}
-//		}
-//		
-//		return false;
-//	}
-	
-	// método 2 teste de tempo do contem
 	public boolean contem(E elemento) { 
 		for (int i = 0; i < this.totalDeElementos; i++) {
 			if (elemento.equals(elementos[i])) {
@@ -122,5 +99,36 @@ public class Vetor<E> implements Lista<E>{
 			}
 			this.elementos = novaArray;
 		}
+	}
+	
+	public void remove(E elemento) {
+		for (int i = 0; i < totalDeElementos; i++) {
+			if (elemento.equals(elementos[i])) {
+				remove(i);
+				break;
+			}
+		}
+	}
+
+	public void clear() {
+		this.totalDeElementos = 0;	
+	}
+
+	public int indexOf(E elemento) {
+		for (int i = 0; i < totalDeElementos; i++) {
+			if (elemento.equals(elementos[i])) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public int lastIndexOf(E elemento) {
+		for (int i = totalDeElementos - 1; i >= 0; i--) {
+			if (elemento.equals(elementos[i])) {
+				return i;
+			}
+		}
+		return -1;
 	}
 }

@@ -1,16 +1,16 @@
 package br.com.hioktec.estruturadedados.lista;
 
-public interface Lista<T> {
+public interface Lista<E> {
 	
-	void adiciona(T obj);
+	void adiciona(E elemento);
 	
-	public void adiciona(int posicao, T obj);
+	public void adiciona(int posicao, E elemento);
 	
-	T pega(int posicao);
+	E pega(int posicao);
 	
 	void remove(int posicao);
 	
-	boolean contem(T obj);
+	boolean contem(E elemento);
 	
 	int tamanho();
 	

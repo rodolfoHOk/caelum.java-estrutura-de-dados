@@ -1,4 +1,4 @@
-package br.com.hioktec.estruturadedados.vetores.utilizando;
+package br.com.hioktec.estruturadedados.vetores.exercicios;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -6,7 +6,7 @@ import java.util.Vector;
 import br.com.hioktec.estruturadedados.representacao.Aluno;
 import br.com.hioktec.estruturadedados.vetores.Vetor;
 
-public class VetoresExercicio12 {
+public class Exercicio12 {
 	
 	public static void main(String[] args) {
 		
