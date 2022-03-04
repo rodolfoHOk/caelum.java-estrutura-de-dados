@@ -1,6 +1,6 @@
 package br.com.hioktec.estruturadedados.vetores;
 
-import br.com.hioktec.estruturadedados.lista.Lista;
+import br.com.hioktec.estruturadedados.listasinterfaces.Lista;
 
 public class Vetor<E> implements Lista<E>{
 

@@ -1,4 +1,4 @@
-package br.com.hioktec.estruturadedados.lista;
+package br.com.hioktec.estruturadedados.listasinterfaces;
 
 public interface ListaExtendida<E> extends Lista<E>{
 	

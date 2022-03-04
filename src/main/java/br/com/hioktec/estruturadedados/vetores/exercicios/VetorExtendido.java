@@ -1,6 +1,6 @@
 package br.com.hioktec.estruturadedados.vetores.exercicios;
 
-import br.com.hioktec.estruturadedados.lista.ListaExtendida;
+import br.com.hioktec.estruturadedados.listasinterfaces.ListaExtendida;
 
 public class VetorExtendido<E> implements ListaExtendida<E>{
 	

@@ -1,6 +1,6 @@
 package br.com.hioktec.estruturadedados.listasligadas;
 
-import br.com.hioktec.estruturadedados.lista.ListaLigadaInterface;
+import br.com.hioktec.estruturadedados.listasinterfaces.ListaLigadaInterface;
 
 public class ListaLigada<E> implements ListaLigadaInterface<E>{
 	
@@ -28,7 +28,7 @@ public class ListaLigada<E> implements ListaLigadaInterface<E>{
 		} else if (posicao == this.totalDeElementos) {
 			this.adiciona(elemento);
 		} else {
-			Celula anterior = this.getCelula(posicao - 1);
+			Celula anterior = this.pegaCelula(posicao - 1);
 			Celula proxima = anterior.getProxima();
 			Celula nova = new Celula(anterior.getProxima(), elemento);
 			nova.setAnterior(anterior);
@@ -40,22 +40,44 @@ public class ListaLigada<E> implements ListaLigadaInterface<E>{
 
 	@SuppressWarnings("unchecked")
 	public E pega(int posicao) {
-		return (E) this.getCelula(posicao).getElemento();
+		return (E) this.pegaCelula(posicao).getElemento();
 	}
 
 	public void remove(int posicao) {
-		// TODO Auto-generated method stub
+		if (!this.posicaoOcupada(0)) {
+			throw new IllegalArgumentException("Posição não existe");
+		}
 		
+		if (posicao == 0) {
+			this.removeDoComeco();
+		} else if (posicao == this.totalDeElementos - 1) {
+			this.removeDoFim();
+		} else {
+			Celula anterior = this.pegaCelula(posicao - 1);
+			Celula atual = anterior.getProxima();
+			Celula proxima = atual.getProxima();
+			
+			anterior.setProxima(proxima);
+			proxima.setAnterior(anterior);
+			
+			this.totalDeElementos--;
+		}
 	}
 
 	public boolean contem(E elemento) {
-		// TODO Auto-generated method stub
+		Celula atual = this.primeira;
+		
+		while (atual != null) {
+			if (atual.getElemento().equals(elemento)) {
+				return true;
+			}
+			atual = atual.getProxima();
+		}
 		return false;
 	}
 
 	public int tamanho() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.totalDeElementos;
 	}
 
 	public void adicionaNoComeco(E elemento) {
@@ -81,8 +103,6 @@ public class ListaLigada<E> implements ListaLigadaInterface<E>{
 		
 		if (this.totalDeElementos == 0) {
 			this.ultima = null;
-		} else {
-			this.primeira.setAnterior(null);
 		}
 	}
 
@@ -127,7 +147,7 @@ public class ListaLigada<E> implements ListaLigadaInterface<E>{
 		return posicao >= 0 && posicao < this.totalDeElementos; 
 	}
 	
-	private Celula getCelula(int posicao) {
+	private Celula pegaCelula(int posicao) {
 		if (!this.posicaoOcupada(posicao)) {
 			throw new IllegalArgumentException("Posição não existe");
 		}
