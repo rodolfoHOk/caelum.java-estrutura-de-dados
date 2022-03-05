@@ -1,7 +1,7 @@
 package br.com.hioktec.estruturadedados.pilhas.teste;
 
 import br.com.hioktec.estruturadedados.pilhas.Pilha;
-import br.com.hioktec.estruturadedados.representacao.Peca;
+import br.com.hioktec.estruturadedados.representacoes.Peca;
 
 public class Teste {
 	public static void main(String[] args) {

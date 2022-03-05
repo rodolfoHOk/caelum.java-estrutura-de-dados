@@ -1,7 +1,7 @@
 package br.com.hioktec.estruturadedados.filas.exercicios;
 
 import br.com.hioktec.estruturadedados.filas.Fila;
-import br.com.hioktec.estruturadedados.representacao.Aluno;
+import br.com.hioktec.estruturadedados.representacoes.Aluno;
 
 public class Exercicio4 {
 	public static void main(String[] args) {

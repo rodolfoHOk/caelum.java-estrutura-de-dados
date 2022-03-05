@@ -2,7 +2,7 @@ package br.com.hioktec.estruturadedados.vetores.testes;
 
 import java.util.ArrayList;
 
-import br.com.hioktec.estruturadedados.representacao.Aluno;
+import br.com.hioktec.estruturadedados.representacoes.Aluno;
 
 public class TesteJavaArrayList {
 	public static void main(String[] args) {

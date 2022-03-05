@@ -2,7 +2,7 @@ package br.com.hioktec.estruturadedados.pilhas.teste;
 
 import java.util.Stack;
 
-import br.com.hioktec.estruturadedados.representacao.Peca;
+import br.com.hioktec.estruturadedados.representacoes.Peca;
 
 public class TesteStack {
 	public static void main(String[] args) {

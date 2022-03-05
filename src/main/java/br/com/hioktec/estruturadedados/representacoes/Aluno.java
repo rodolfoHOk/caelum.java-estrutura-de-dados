@@ -1,4 +1,4 @@
-package br.com.hioktec.estruturadedados.representacao;
+package br.com.hioktec.estruturadedados.representacoes;
 
 public class Aluno {
 	

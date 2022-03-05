@@ -3,7 +3,7 @@ package br.com.hioktec.estruturadedados.filas.testes;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import br.com.hioktec.estruturadedados.representacao.Aluno;
+import br.com.hioktec.estruturadedados.representacoes.Aluno;
 
 public class TesteQueue {
 	public static void main(String[] args) {

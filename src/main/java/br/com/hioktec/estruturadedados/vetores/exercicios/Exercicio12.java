@@ -3,7 +3,7 @@ package br.com.hioktec.estruturadedados.vetores.exercicios;
 import java.util.ArrayList;
 import java.util.Vector;
 
-import br.com.hioktec.estruturadedados.representacao.Aluno;
+import br.com.hioktec.estruturadedados.representacoes.Aluno;
 import br.com.hioktec.estruturadedados.vetores.Vetor;
 
 public class Exercicio12 {

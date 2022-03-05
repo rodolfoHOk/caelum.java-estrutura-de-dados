@@ -1,6 +1,6 @@
 package br.com.hioktec.estruturadedados.vetores.testes;
 
-import br.com.hioktec.estruturadedados.representacao.Aluno;
+import br.com.hioktec.estruturadedados.representacoes.Aluno;
 import br.com.hioktec.estruturadedados.vetores.Vetor;
 
 public class TesteContemAluno {

@@ -2,7 +2,7 @@ package br.com.hioktec.estruturadedados.listasligadas.testes;
 
 import java.util.LinkedList;
 
-import br.com.hioktec.estruturadedados.representacao.Aluno;
+import br.com.hioktec.estruturadedados.representacoes.Aluno;
 
 public class TesteLinkedList {
 	public static void main(String[] args) {

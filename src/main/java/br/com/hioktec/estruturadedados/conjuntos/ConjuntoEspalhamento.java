@@ -19,6 +19,7 @@ public class ConjuntoEspalhamento<E> implements Conjunto<E> {
 		}
 	}
 	
+	@Override
 	public void adiciona(E elemento) {
 		if (!this.contem(elemento)) {
 			verificaCarga();
@@ -29,6 +30,7 @@ public class ConjuntoEspalhamento<E> implements Conjunto<E> {
 		}
 	}
 
+	@Override
 	public void remove(E elemento) {
 		if (this.contem(elemento)) {
 			int indice = this.calculaIndiceDaTabela(elemento);
@@ -39,12 +41,14 @@ public class ConjuntoEspalhamento<E> implements Conjunto<E> {
 		}		
 	}
 
+	@Override
 	public boolean contem(E elemento) {
 		int indice = this.calculaIndiceDaTabela(elemento);
 		List<E> lista = this.tabela.get(indice);
 		return lista.contains(elemento);
 	}
 
+	@Override
 	public List<E> pegaTodos() {
 		List<E> elementos = new ArrayList<E>();
 		for (int i = 0; i < this.tabela.size(); i++) {
@@ -53,6 +57,7 @@ public class ConjuntoEspalhamento<E> implements Conjunto<E> {
 		return elementos;
 	}
 
+	@Override
 	public int tamanho() {
 		return this.tamanho;
 	}
@@ -87,14 +92,15 @@ public class ConjuntoEspalhamento<E> implements Conjunto<E> {
 	private void redimensionaTabela(int novaCapacidade) {
 		List<E> elementos = this.pegaTodos();
 		this.tabela.clear();
-		this.tamanho = 0;
 		
 		for (int i = 0; i < novaCapacidade; i++) {
 			this.tabela.add(new LinkedList<E>());
 		}
 		
 		for (E elemento : elementos) {
-			this.adiciona(elemento);
+			int indice = this.calculaIndiceDaTabela(elemento);
+			List<E> lista = this.tabela.get(indice);
+			lista.add(elemento);
 		};
 	}
 	

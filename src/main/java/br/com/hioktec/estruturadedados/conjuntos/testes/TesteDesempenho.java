@@ -21,6 +21,6 @@ public class TesteDesempenho {
 		System.out.println("Desempenho em segundos: " + (fim - inicio)/1000.0);
 		
 		// sem redimensionamento: 2.21
-		// com redimensionamento: 0.264
+		// com redimensionamento: 0.249
 	}
 }

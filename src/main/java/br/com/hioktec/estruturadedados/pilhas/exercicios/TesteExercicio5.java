@@ -1,6 +1,6 @@
 package br.com.hioktec.estruturadedados.pilhas.exercicios;
 
-import br.com.hioktec.estruturadedados.representacao.Peca;
+import br.com.hioktec.estruturadedados.representacoes.Peca;
 
 public class TesteExercicio5 {
 	public static void main(String[] args) {
