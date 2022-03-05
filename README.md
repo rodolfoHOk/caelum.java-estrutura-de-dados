@@ -2,9 +2,9 @@
 
 ## Resumo do curso
 
-	Algoritmo e Implementação
-	Estrutura de Dados
-	Armazenamento Sequencial
+- Algoritmo e Implementação
+- Estrutura de Dados
+- Armazenamento Sequencial
 
 ## Listas e Modelagem
 
@@ -65,9 +65,9 @@
 
 ## Armazenamento sem repetição com busca rápida
 
-	Motivação
-	O problema do vocabulário
-	Conjuntos
+- Motivação
+- O problema do vocabulário
+- Conjuntos
 
 
 ### Tabelas de Espalhamento
@@ -90,8 +90,8 @@
 
 ## Armazenamento Associativo
 
-	Motivação
-	Mapa
+- Motivação
+- Mapa
 
 ### Mapas com Lista
 
